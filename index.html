@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday, Dad (Swapnil) 🎉</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #ffe082 0, #ffb74d 30%, #f57c00 70%, #4e342e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .star {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      animation: twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.4); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      width: min(900px, 95vw);
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 24px;
+      padding: 32px 28px 28px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: conic-gradient(
+        from 180deg,
+        rgba(255, 255, 255, 0.15),
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+      );
+      opacity: 0.7;
+      mix-blend-mode: screen;
+      animation: rotateGlow 18s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes rotateGlow {
+      to { transform: rotate(360deg); }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      border-radius: 50% 50% 45% 45%;
+      background: linear-gradient(145deg, #ffeb3b, #ff9800);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      position: relative;
+      animation: float 3.5s ease-in-out infinite;
+    }
+
+    .balloon::before {
+      content: "";
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.7);
+      transform: translateX(-50%);
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 10px solid #ff9800;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .title-block {
+      flex: 1;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ffe0b2;
+      margin-bottom: 4px;
+    }
+
+    .title {
+      font-size: clamp(2.1rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+    }
+
+    .title span.highlight {
+      background: linear-gradient(120deg, #ffeb3b, #ff9800, #ffcc80);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .year-tag {
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #ffe0b2;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .year-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffeb3b;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 22px;
+      margin-top: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 720px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .message {
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .message h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #ffecb3;
+    }
+
+    .message p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #fff8e1;
+      margin-bottom: 8px;
+    }
+
+    .message p:last-child {
+      margin-bottom: 0;
+    }
+
+    .signature {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      color: #ffe0b2;
+      font-style: italic;
+    }
+
+    .right-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .cake {
+      position: relative;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 18px;
+      padding: 16px 14px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      text-align: center;
+    }
+
+    .cake-title {
+      font-size: 0.95rem;
+      color: #ffecb3;
+      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .cake-plate {
+      position: relative;
+      margin: 0 auto;
+      width: 150px;
+      height: 120px;
+    }
+
+    .cake-layer {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffcc80;
+      border-radius: 12px;
+      box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .cake-layer.layer1 {
+      bottom: 0;
+      width: 150px;
+      height: 40px;
+    }
+
+    .cake-layer.layer2 {
+      bottom: 32px;
+      width: 120px;
+      height: 32px;
+    }
+
+    .cake-layer.layer3 {
+      bottom: 60px;
+      width: 90px;
+      height: 26px;
+    }
+
+    .cake-frosting {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        #ffb74d,
+        #ffb74d 6px,
+        #ffe082 6px,
+        #ffe082 12px
+      );
+      border-radius: inherit;
+      overflow: hidden;
+    }
+
+    .cake-drip {
+      position: absolute;
+      top: 18px;
+      left: 10px;
+      right: 10px;
+      height: 16px;
+      background:
+        radial-gradient(circle at 10px 0, #ffe082 0, #ffe082 8px, transparent 9px),
+        radial-gradient(circle at 40px 0, #ffe082 0, #ffe082 8px, transparent 9px),
+        radial-gradient(circle at 70px 0, #ffe082 0, #ffe082 8px, transparent 9px),
+        radial-gradient(circle at 100px 0, #ffe082 0, #ffe082 8px, transparent 9px);
+    }
+
+    .cake-base {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 170px;
+      height: 10px;
+      background: #3e2723;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .candle {
+      position: absolute;
+      bottom: 86px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 26px;
+      background: repeating-linear-gradient(
+        90deg,
+        #ff7043,
+        #ff7043 3px,
+        #ffe0b2 3px,
+        #ffe0b2 6px
+      );
+      border-radius: 4px;
+    }
+
+    .flame {
+      position: absolute;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 24px;
+      background: radial-gradient(circle at 50% 20%, #fffde7 0, #ffeb3b 40%, #ff9800 70%, transparent 72%);
+      border-radius: 50% 50% 50% 50%;
+      filter: drop-shadow(0 0 8px rgba(255, 235, 59, 0.9));
+      animation: flicker 0.18s infinite alternate;
+      cursor: pointer;
+    }
+
+    .flame::after {
+      content: "Make a wish ✨";
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.65rem;
+      color: #fffde7;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+      white-space: nowrap;
+    }
+
+    @keyframes flicker {
+      from { transform: translateX(-50%) scale(1); opacity: 1; }
+      to { transform: translateX(-52%) scale(0.9); opacity: 0.8; }
+    }
+
+    .wish-text {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #fff8e1;
+      min-height: 1.2em;
+    }
+
+    .stats {
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-size: 0.9rem;
+      color: #ffe0b2;
+    }
+
+    .stats-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+      color: #ffecb3;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      opacity: 0.9;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      color: #fffde7;
+    }
+
+    .footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #ffe0b2;
+      position: relative;
+      z-index: 1;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tagline {
+      opacity: 0.9;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fffde7;
+      backdrop-filter: blur(6px);
+      transition: background 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn span.icon {
+      font-size: 1rem;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #ffca28, #ff9800);
+      color: #3e2723;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn.primary:hover {
+      background: linear-gradient(135deg, #ffe082, #ffb74d);
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%) translateY(120%);
+      background: rgba(0, 0, 0, 0.85);
+      color: #fffde7;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      z-index: 10;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .toast-icon {
+      font-size: 1rem;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+
+  <div class="card">
+    <div class="header">
+      <div class="balloon"></div>
+      <div class="title-block">
+        <div class="subtitle">To the best dad</div>
+        <div class="title">
+          Happy Birthday,
+          <span class="highlight">Swapnil</span> 🎉
+        </div>
+        <div class="year-tag">
+          <span class="year-dot"></span>
+          Celebrating another legendary year
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="message">
+        <h2>Dear Dad,</h2>
+        <p>
+          Today isn’t just another day on the calendar—it’s the day the world got you,
+          and I got the luck of calling you my dad.
+        </p>
+        <p>
+          Thank you for every quiet sacrifice, every time you believed in me even when I didn’t believe in myself.
+          You’ve been my protector and my biggest supporter.
+        </p>
+        <p>
+          I hope this year brings you the same warmth, strength, and happiness
+          you’ve always given me without ever asking for anything back.
+          You deserve all the good things—today and always.
+        </p>
+        <p class="signature">
+          With all my love,<br />
+          Your kid 💛
+        </p>
+      </div>
+
+      <div class="right-panel">
+        <div class="cake">
+          <div class="cake-title">Tap the flame to make a wish</div>
+          <div class="cake-plate">
+            <div class="cake-layer layer1">
+              <div class="cake-frosting"></div>
+              <div class="cake-drip"></div>
+            </div>
+            <div class="cake-layer layer2">
+              <div class="cake-frosting"></div>
+            </div>
+            <div class="cake-layer layer3">
+              <div class="cake-frosting"></div>
+            </div>
+            <div class="candle">
+              <div class="flame" id="flame"></div>
+            </div>
+            <div class="cake-base"></div>
+          </div>
+          <div class="wish-text" id="wishText"></div>
+        </div>
+
+        <div class="stats">
+          <div class="stats-title">Dad stats (100% certified)</div>
+          <div class="stat-row">
+            <div class="stat-label">Kindness level</div>
+            <div class="stat-value">∞</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-label">Amount of fun per day</div>
+            <div class="stat-value">Legendary</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-label">Support & love</div>
+            <div class="stat-value">Off the charts</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-label">World’s best dad rating</div>
+            <div class="stat-value">⭐ 5.0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="tagline">
+        Built with love, a little code, and a whole lot of gratitude. 💛
+      </div>
+      <div class="btn-row">
+        <!-- Play button removed per request -->
+        <button class="btn" id="btnCopy">
+          <span class="icon">📋</span>
+          Copy message for Dad
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span id="toastText">Copied!</span>
+  </div>
+
+  <!-- Audio removed -->
+
+  <script>
+    // Floating stars
+    (function createStars() {
+      const container = document.getElementById("stars");
+      const count = 60;
+      for (let i = 0; i < count; i++) {
+        const star = document.createElement("div");
+        star.className = "star";
+        const size = Math.random() * 3 + 2;
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.top = Math.random() * 100 + "%";
+        star.style.left = Math.random() * 100 + "%";
+        star.style.animationDelay = (Math.random() * 3).toFixed(2) + "s";
+        container.appendChild(star);
+      }
+    })();
+
+    // Candle flame interaction
+    const flame = document.getElementById("flame");
+    const wishText = document.getElementById("wishText");
+    let flameOn = true;
+
+    const wishes = [
+      "May this year be full of peace, health, and little moments that make you smile.",
+      "I hope every dream you quietly keep in your heart moves closer to reality.",
+      "May you always feel how deeply you’re loved—today and every day.",
+      "Here’s to more laughter, more memories, and more reasons to be proud.",
+      "May life keep surprising you in the best possible ways."
+    ];
+
+    flame.addEventListener("click", () => {
+      if (!flameOn) {
+        // Relight
+        flame.style.opacity = "1";
+        flame.style.filter = "drop-shadow(0 0 8px rgba(255, 235, 59, 0.9))";
+        flame.style.animationPlayState = "running";
+        wishText.textContent = "";
+        flameOn = true;
+      } else {
+        // Blow out
+        flame.style.opacity = "0";
+        flame.style.filter = "none";
+        flame.style.animationPlayState = "paused";
+        const wish = wishes[Math.floor(Math.random() * wishes.length)];
+        wishText.textContent = wish;
+        flameOn = false;
+      }
+    });
+
+    // Toast helper
+    const toast = document.getElementById("toast");
+    const toastText = document.getElementById("toastText");
+    let toastTimeout;
+
+    function showToast(message) {
+      toastText.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2200);
+    }
+
+    // Copy message button
+    const btnCopy = document.getElementById("btnCopy");
+    btnCopy.addEventListener("click", async () => {
+      const text = `Dear Dad (Swapnil),
+
+Today isn’t just another day on the calendar—it’s the day the world got you, and I got the luck of calling you my dad.
+
+Thank you for every quiet sacrifice, every time you believed in me even when I didn’t believe in myself. You’ve been my protector and my biggest supporter.
+
+I hope this year brings you the same warmth, strength, and happiness you’ve always given me without ever asking for anything back. You deserve all the good things—today and always.
+
+With all my love,
+Your kid 💛`;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        showToast("Message copied—go send it to Dad! 💛");
+      } catch (e) {
+        showToast("Couldn’t copy automatically, but you can select and copy it yourself.");
+      }
+    });
+
+    // Audio removed
+  </script>
+</body>
+</html>
+  
