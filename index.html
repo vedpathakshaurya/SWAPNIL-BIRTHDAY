@@ -1,310 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Dad 🎉</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Dad 🎉</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    <style>
-        :root {
-            --primary: #ff6b6b;
-            --secondary: #ffd93d;
-            --accent: #4d96ff;
-            --bg: #fff7e6;
-            --dark: #222;
-            --light: #ffffff;
-            --muted: #777;
-        }
+  <style>
+    :root {
+      --primary: #ff6b6b;
+      --secondary: #ffd93d;
+      --accent: #4d96ff;
+      --bg: #fff7e6;
+      --dark: #222;
+      --light: #ffffff;
+      --muted: #777;
+    }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: radial-gradient(circle at top left, #ffe6e6, #fff7e6);
-            color: var(--dark);
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #ffe6e6, #fff7e6);
+      color: var(--dark);
+    }
 
-        /* NAVBAR */
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            height: 60px;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            z-index: 1000;
-        }
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 60px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      z-index: 1000;
+    }
 
-        nav .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--primary);
-        }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 500;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 500;
+    }
 
-        nav ul li a:hover { color: var(--primary); }
+    nav ul li a:hover { color: var(--primary); }
 
-        /* HERO */
-        header {
-            height: 100vh;
-            padding-top: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
+    /* HERO */
+    header {
+      height: 100vh;
+      padding-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
 
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            filter: brightness(0.6);
-            z-index: -1;
-        }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      filter: brightness(0.6);
+      z-index: -1;
+    }
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-        }
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+    }
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
 
-        .btn {
-            margin-top: 20px;
-            padding: 12px 22px;
-            border-radius: 30px;
-            border: none;
-            cursor: pointer;
-            font-weight: 600;
-            background: var(--primary);
-            color: white;
-            box-shadow: 0 8px 18px rgba(255,107,107,0.4);
-        }
+    .btn {
+      margin-top: 20px;
+      padding: 12px 22px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 8px 18px rgba(255,107,107,0.4);
+    }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 24px rgba(255,107,107,0.5);
-        }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(255,107,107,0.5);
+    }
 
-        /* SECTIONS */
-        .section {
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+    /* SECTIONS */
+    .section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
 
-        .section-subtitle {
-            text-align: center;
-            color: var(--muted);
-            margin-bottom: 40px;
-        }
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
-        }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
 
-        /* QUOTES */
-        .quotes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
+    /* QUOTES */
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
 
-        .quote-card {
-            background: white;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
+    .quote-card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
-        .quote-text {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
+    .quote-text {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
 
-        .quote-author {
-            font-size: 0.85rem;
-            color: var(--muted);
-            text-align: right;
-        }
+    .quote-author {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: right;
+    }
 
-        /* CAKE SURPRISE */
-        .cake {
-            width: 220px;
-            display: block;
-            margin: 20px auto;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+    /* CAKE SURPRISE */
+    .cake {
+      width: 220px;
+      display: block;
+      margin: 20px auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
 
-        .cake:hover {
-            transform: scale(1.1) rotate(2deg);
-        }
+    .cake:hover {
+      transform: scale(1.1) rotate(2deg);
+      filter: drop-shadow(0 0 15px #ff6b6b);
+      animation: bounce 0.6s ease infinite alternate;
+    }
 
-        #cakeMessage {
-            display: none;
-            margin-top: 20px;
-            font-size: 1rem;
-            line-height: 1.6;
-            text-align: center;
-        }
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
 
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
-    </style>
+    #cakeMessage {
+      display: none;
+      margin-top: 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">Swapnil's Birthday 🎂</div>
-        <ul>
-            <li><a href="#message">Message</a></li>
-            <li><a href="#quotes">Quotes</a></li>
-            <li><a href="#cake">Surprise</a></li>
-        </ul>
-    </nav>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Swapnil's Birthday 🎂</div>
+    <ul>
+      <li><a href="#message">Message</a></li>
+      <li><a href="#quotes">Quotes</a></li>
+      <li><a href="#cake">Surprise</a></li>
+    </ul>
+  </nav>
 
-    <!-- HERO -->
-    <header>
-        <div class="hero-bg"></div>
-        <div>
-            <h1 class="hero-title">Happy Birthday, Dad 🎉</h1>
-            <p class="hero-subtitle">Celebrating the most amazing father — Swapnil ❤️</p>
-            <button class="btn" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">
-                Read My Message 💌
-            </button>
+  <!-- HERO -->
+  <header>
+    <div class="hero-bg"></div>
+    <div>
+      <h1 class="hero-title">Happy Birthday, Dad 🎉</h1>
+      <p class="hero-subtitle">Celebrating the most amazing father — Swapnil ❤️</p>
+      <button class="btn" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">
+        Read My Message 💌
+      </button>
+    </div>
+  </header>
+
+  <!-- MESSAGE -->
+  <section id="message" class="section">
+    <h2 class="section-title">Dear Dad,</h2>
+    <p class="section-subtitle">A heartfelt message from your child.</p>
+
+    <div class="card">
+      <p>
+        Today is your special day, and I want you to know how much you mean to me.
+        You are strong, caring, funny, and the best father anyone could ask for.
+      </p>
+      <p style="margin-top: 15px;">
+        Thank you for everything you do — your love, your support, and your guidance.
+      </p>
+      <p style="margin-top: 15px; font-weight: 600;">
+        Happy Birthday, Dad! 🎂❤️
+      </p>
+    </div>
+  </section>
+
+  <!-- QUOTES -->
+  <section id="quotes" class="section">
+    <h2 class="section-title">Famous Quotes About Fathers 💬</h2>
+    <p class="section-subtitle">Words that remind me of you.</p>
+
+    <div class="quotes-grid">
+      <div class="quote-card">
+        <div class="quote-text">
+          “A father is someone you look up to no matter how tall you grow.”
         </div>
-    </header>
+        <div class="quote-author">— Unknown</div>
+      </div>
 
-    <!-- MESSAGE -->
-    <section id="message" class="section">
-        <h2 class="section-title">Dear Dad,</h2>
-        <p class="section-subtitle">A heartfelt message from your child.</p>
-
-        <div class="card">
-            <p>
-                Today is your special day, and I want you to know how much you mean to me.
-                You are strong, caring, funny, and the best father anyone could ask for.
-            </p>
-            <p style="margin-top: 15px;">
-                Thank you for everything you do — your love, your support, and your guidance.
-            </p>
-            <p style="margin-top: 15px; font-weight: 600;">
-                Happy Birthday, Dad! 🎂❤️
-            </p>
+      <div class="quote-card">
+        <div class="quote-text">
+          “The greatest mark of a father is how he treats his children when no one is looking.”
         </div>
-    </section>
+        <div class="quote-author">— Dan Pearce</div>
+      </div>
 
-    <!-- QUOTES -->
-    <section id="quotes" class="section">
-        <h2 class="section-title">Famous Quotes About Fathers 💬</h2>
-        <p class="section-subtitle">Words that remind me of you.</p>
-
-        <div class="quotes-grid">
-
-            <div class="quote-card">
-                <div class="quote-text">
-                    “A father is someone you look up to no matter how tall you grow.”
-                </div>
-                <div class="quote-author">— Unknown</div>
-            </div>
-
-            <div class="quote-card">
-                <div class="quote-text">
-                    “The greatest mark of a father is how he treats his children when no one is looking.”
-                </div>
-                <div class="quote-author">— Dan Pearce</div>
-            </div>
-
-            <div class="quote-card">
-                <div class="quote-text">
-                    “Dads are most ordinary men turned by love into heroes.”
-                </div>
-                <div class="quote-author">— Pam Brown</div>
-            </div>
-
-            <div class="quote-card">
-                <div class="quote-text">
-                    “To the world you are a dad. To our family, you are the world.”
-                </div>
-                <div class="quote-author">— Unknown</div>
-            </div>
-
+      <div class="quote-card">
+        <div class="quote-text">
+          “Dads are most ordinary men turned by love into heroes.”
         </div>
-    </section>
+        <div class="quote-author">— Pam Brown</div>
+      </div>
 
-    <!-- CAKE SURPRISE -->
-    <section id="cake" class="section">
-        <h2 class="section-title">A Birthday Surprise 🎂</h2>
-        <p class="section-subtitle">Tap the cake to reveal a message.</p>
-
-        <img src="https://i.imgur.com/4YVZQhO.png"
-             class="cake"
-             onclick="showCakeMessage()"
-             alt="Birthday cake">
-
-        <div id="cakeMessage">
-            🎉 Surprise, Dad!
-            <br><br>
-            You deserve all the happiness in the world.
-            <br>
-            I love you so much. ❤️
-            <br><br>
-            Happy Birthday! 🎂
+      <div class="quote-card">
+        <div class="quote-text">
+          “To the world you are a dad. To our family, you are the world.”
         </div>
-    </section>
+        <div class="quote-author">— Unknown</div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        Made with ❤️ by your child.
-    </footer>
-
-    <script>
-        function showCakeMessage() {
-            document.getElementById('cakeMessage').style.display = 'block';
-        }
-    </script>
-
-</body>
-</html>
+  <!-- CAKE SURPRISE -->
+  <section id="cake" class="section">
+    <h2 class="section-title">A Birthday Surprise 🎂</h2
