@@ -163,25 +163,16 @@
       text-align: right;
     }
 
-    /* CAKE SURPRISE */
-    .cake {
-      width: 220px;
-      display: block;
-      margin: 20px auto;
+    /* CAKE SURPRISE (EMOJI) */
+    .cake-emoji {
+      font-size: 80px;
+      text-align: center;
       cursor: pointer;
       transition: transform 0.3s ease;
-      border-radius: 12px;
     }
 
-    .cake:hover {
-      transform: scale(1.1) rotate(2deg);
-      filter: drop-shadow(0 0 15px #ff6b6b);
-      animation: bounce 0.6s ease infinite alternate;
-    }
-
-    @keyframes bounce {
-      from { transform: translateY(0); }
-      to { transform: translateY(-10px); }
+    .cake-emoji:hover {
+      transform: scale(1.2);
     }
 
     #cakeMessage {
@@ -281,15 +272,12 @@
     </div>
   </section>
 
-  <!-- CAKE SURPRISE -->
+  <!-- CAKE SURPRISE (EMOJI) -->
   <section id="cake" class="section">
     <h2 class="section-title">A Birthday Surprise 🎂</h2>
     <p class="section-subtitle">Tap the cake to reveal a message.</p>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Birthday_cake_with_candles.jpg/640px-Birthday_cake_with_candles.jpg"
-         class="cake"
-         onclick="showCakeMessage()"
-         alt="Birthday cake">
+    <div class="cake-emoji" onclick="showCakeMessage()">🎂</div>
 
     <div id="cakeMessage">
       🎉 Surprise, Dad!<br><br>
