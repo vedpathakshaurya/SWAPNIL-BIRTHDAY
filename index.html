@@ -165,9 +165,15 @@
 
         /* CAKE SURPRISE */
         .cake {
-            width: 200px;
-            margin: 20px auto;
+            width: 220px;
             display: block;
+            margin: 20px auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cake:hover {
+            transform: scale(1.1) rotate(2deg);
         }
 
         #cakeMessage {
@@ -274,15 +280,17 @@
         <h2 class="section-title">A Birthday Surprise 🎂</h2>
         <p class="section-subtitle">Tap the cake to reveal a message.</p>
 
-        <img src="https://i.imgur.com/7yUvePI.png" class="cake" onclick="showCakeMessage()" alt="Birthday cake" style="width:200px;display:block;margin:20px auto;">
-
+        <img src="https://i.imgur.com/4YVZQhO.png"
+             class="cake"
+             onclick="showCakeMessage()"
+             alt="Birthday cake">
 
         <div id="cakeMessage">
-            🎉 Surprise, Dad!  
+            🎉 Surprise, Dad!
             <br><br>
-            You deserve all the happiness in the world.  
+            You deserve all the happiness in the world.
             <br>
-            I love you so much. ❤️  
+            I love you so much. ❤️
             <br><br>
             Happy Birthday! 🎂
         </div>
