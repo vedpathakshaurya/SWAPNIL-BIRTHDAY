@@ -283,4 +283,41 @@
 
   <!-- CAKE SURPRISE -->
   <section id="cake" class="section">
-    <h2 class="section-title">A Birthday Surprise 🎂</h2
+    <h2 class="section-title">A Birthday Surprise 🎂</h2>
+    <p class="section-subtitle">Tap the cake to reveal a message.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Birthday_cake_with_candles.jpg/640px-Birthday_cake_with_candles.jpg"
+         class="cake"
+         onclick="showCakeMessage()"
+         alt="Birthday cake">
+
+    <div id="cakeMessage">
+      🎉 Surprise, Dad!<br><br>
+      You deserve all the happiness in the world.<br>
+      I love you so much. ❤️<br><br>
+      Happy Birthday! 🎂
+    </div>
+  </section>
+
+  <footer>
+    Made with ❤️ by your child.
+  </footer>
+
+  <!-- CONFETTI SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    function showCakeMessage() {
+      document.getElementById('cakeMessage').style.display = 'block';
+
+      // Confetti burst
+      confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+    }
+  </script>
+
+</body>
+</html>
