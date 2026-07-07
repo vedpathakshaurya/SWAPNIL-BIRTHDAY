@@ -303,19 +303,26 @@
     Made with ❤️ by your child.
   </footer>
 
-  <!-- CONFETTI SCRIPT -->
+  <!-- FIREWORKS SCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
     function showCakeMessage() {
       document.getElementById('cakeMessage').style.display = 'block';
 
-      // Confetti burst
-      confetti({
-        particleCount: 200,
-        spread: 90,
-        origin: { y: 0.6 }
-      });
+      // Fireworks burst
+      for (let i = 0; i < 20; i++) {
+        confetti({
+          particleCount: 30,
+          startVelocity: 60,
+          spread: 360,
+          ticks: 50,
+          origin: {
+            x: Math.random(),
+            y: Math.random() * 0.5
+          }
+        });
+      }
     }
   </script>
 
